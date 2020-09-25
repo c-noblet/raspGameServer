@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+body {
+  margin: 0;
+  background-color: #00334E;
+  font-family: "Open sans";
+  color: white;
+}
+body #container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1400px) {
+  body #container {
+    width: 75%;
+  }
+}
+@media (max-width: 1050px) {
+  body #container {
+    width: 85%;
+  }
+}
+@media (max-width: 700px) {
+  body #container {
+    width: 95%;
+  }
+}
+body #container #logo {
+  text-align: center;
+  margin: 20px 0 15px 0;
+}
+body #container #logo img {
+  height: 100px;
+  width: 100px;
+}
+body #container #main-title {
+  text-align: center;
+  width: 250px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body #container #main-title .title {
+  background-color: #135375;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+}
+body #container #welcome-para {
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body #container #welcome-para #welcome {
+  width: 375px;
+  padding: 10px;
+  border: 1px solid #EE6F57;
+  border-radius: 10px;
+  text-align: center;
+}
+body #container #connection-manette {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+body #container #connection-manette .manette {
+  padding-top: 20px;
+  width: 45%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+body #container #connection-manette .manette p {
+  color: #135375;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+body #container #connection-manette .manette .bottom-manette {
+  background-color: #EE6F57;
+  padding: 10px;
+  border-bottom-right-radius: 10px;
+}
+body #container #connection-manette .manette .bottom-manette .spin-loader {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #3BCEAC;
+  border-left-color: #0EAD69;
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+  margin: auto;
+}
+body #container #container-player {
+  display: none;
+}
+body #container #container-player #selection-player {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body #container #container-player #selection-player .single-player {
+  border-radius: 10px;
+  background-color: white;
+  width: 30%;
+  padding: 2px 10px;
+  margin: 10px 0;
+  display: flex;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+}
+body #container #container-player #selection-player .single-player p {
+  color: #135375;
+}
+body #container #container-player #selection-player .single-player img {
+  height: 22px;
+  margin: auto 20px auto 10px;
+}
+body #container #container-player #selection-player .single-player.active-player-1 {
+  background: #FFD23F;
+}
+body #container #container-player #selection-player .single-player.active-player-2 {
+  background: #0EAD69;
+}
+body #container #container-game {
+  display: none;
+  margin-top: 30px;
+}
+body #container #container-game #selection-game {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body #container #container-game #selection-game .game {
+  width: 40%;
+  height: 40vh;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+body #container #container-game #selection-game .game .game-background {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+body #container #container-game #selection-game .game .game-background p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  opacity: 0;
+  color: #135375;
+  padding: 30px;
+  border-radius: 10px;
+}
+body #container #container-game #selection-game .game.active {
+  box-sizing: border-box;
+  border: 6px solid #FFD23F;
+}
+body #container #container-game #selection-game .game.active .game-background {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  filter: grayscale(0.5);
+}
+body #container #container-game #selection-game .game.active .game-background p {
+  opacity: 1;
+}
+body #container #container-game #selection-game #pong.game .game-background {
+  background: center/cover no-repeat url("../img/pong-game.jpeg");
+}
+body #container #container-game #selection-game #pfc.game .game-background {
+  background: center/cover no-repeat url("../img/pfc-game.jpeg");
+}
+body #container #container-game #selection-game #tron.game .game-background {
+  background: center/cover no-repeat url("../img/tron-game.jpeg");
+}
+
+@keyframes rotate-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

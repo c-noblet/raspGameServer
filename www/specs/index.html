@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Specmode - Visionnez les parties en direct</title>
+        <link rel="stylesheet"type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+        <link rel="icon" type="image/png" href="img/eye-logo.png" />
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="logo">
+                <img src="img/eye-logo.png" alt="logo">
+            </div>
+
+            <div id="main-title">
+                <h1 class="title">Reboot Camp</h1>
+            </div>
+
+            <div id="welcome-para">
+                <p id="welcome">Vous êtes ici les bienvenus comme spectateurs</p>
+            </div>
+
+            <div class="game-block">
+                <div class="game-infos">
+                    <span class="game-name">Nom du jeu</span>
+
+                    <div class="infos">
+                        <span class="pseudo1">Pseudo_joueur_1</span>
+                        <p class="score"><span class="score1">8</span> - <span class="score2">2</span></p>
+                        <span class="pseudo2">Pseudo_joueur_1</span>
+                    </div>
+                </div>
+
+                <div class="game">
+                    <canvas id="canvas">
+                        <div>
+                            <img id="cross" src="img/cross.png" width="50px" height="50px">
+                        </div>
+                    </canvas>
+                </div>
+
+                <div class="countup" id="countup1">
+                  <span class="timeel minutes">00</span>
+                  <span class="timeel timeRefMinutes"> : </span>
+                  <span class="timeel seconds">00</span>
+                </div>
+            </div>
+
+            <div class="nogame">
+              <p>Pas de partie en cours...</p>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script type="text/javascript" src="js/pong.js"></script>
+        <script type="text/javascript" src="js/game-simulate.js"></script>
+        <script>
+            var socket = io.connect('192.168.43.54:3000');
+            socket.on('connect', function() {
+                socket.on('manette', function(msg) {
+                    console.log(msg.topic+' '+msg.message);
+                });
+            });
+
+            $(document).ready(socket.emit('subscribe', {topic:'manette'}));
+        </script>
+    </body>
+</html>

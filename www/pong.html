@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/pong.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <title>Pong</title>
+</head>
+<body>
+
+    <div id="gamesList">
+        <p id="gamesListMsg">Appuyer sur une touche pour revenir à la sélection des jeux</p>
+    </div>
+
+
+    <div id="startButton">
+        <p id="startButtonMsg">Appuyer pour commencer</p>
+    </div>
+
+	<div class="canvas-container">
+		<canvas id="canvas"></canvas>
+	</div>
+
+<audio preload="true" id="collide">
+    <source src="https://dl.dropbox.com/u/26141789/canvas/pingpong/Metal%20Cling%20-%20Hit.mp3" />
+    <source src="https://dl.dropbox.com/u/26141789/canvas/pingpong/Metal%20Cling%20-%20Hit.wav" />
+</audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script type="text/javascript" src="js/pong.js"></script>
+<!-- <script>
+    var socket = io.connect('192.168.43.54:3000');
+    socket.on('connect', function() {
+        console.log('connect');
+        socket.on('manette', function(msg) {
+            movePad(msg.message);
+        });
+    });
+    $(document).ready(function (){
+        socket.emit('subscribe', {topic:'manette'});
+    });
+</script> -->
+</body>
+</html>

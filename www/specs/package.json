@@ -1,0 +1,20 @@
+{
+  "name": "specpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmanachem/specpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmanachem/specpage/issues"
+  },
+  "homepage": "https://github.com/vmanachem/specpage#readme"
+}

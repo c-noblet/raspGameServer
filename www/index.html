@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Game - Reboot camp</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="logo">
+                <img src="img/gamepad.png" alt="logo">
+            </div>
+            
+            <div id="main-title">
+                <h1 class="title">Reboot Camp</h1>
+            </div>
+            
+            <div id="welcome-para">
+                <p id="welcome">Vous êtes ici les bienvenus comme joueurs</p>
+            </div>
+
+            <div id="container-manette">
+                <h2 class="title">Connexion des manettes</h2>
+                <div id="connection-manette">
+                    <div class="manette" id="controller1">
+                        <img src="img/controllerGreen.png" alt="logo">
+                        <p>Joueur 1 non connecté</p>
+                        <div class="bottom-manette">
+                            <div class="spin-loader"></div>
+                        </div>
+                    </div>
+                    <div class="manette" id="controller2">
+                        <img src="img/controllerYellow.png" alt="logo">
+                        <p>Joueur 2 non connecté</p>
+                        <div class="bottom-manette">
+                            <div class="spin-loader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="container-player">
+                <h2 class="title">Choix de pseudo du joueur n°1</h2>
+                <div id="selection-player">
+                </div>
+            </div>
+            <div id="container-game">
+                <h2 class="title">Choix du jeu</h2>
+                <div id="selection-game">
+                    <div id="pong" data-game="0" class="game active">
+                        <div class="game-background">
+                            <p>Pong</p>
+                        </div>
+                    </div>
+                    <div id="pfc" data-game="1" class="game">
+                        <div class="game-background">
+                            <p>Pierre Feuille Ciseaux</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>      
+<script type="text/javascript" src="js/interface.js"></script>
+        <script type="text/javascript" src="js/connectGapi.js"></script>  
+      <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){}; handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+      
+  
+    </body>
+</html>
